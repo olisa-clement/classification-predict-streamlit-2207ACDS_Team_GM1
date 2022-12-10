@@ -284,7 +284,9 @@ def main():
 
         joel.image("phot-joel.jpeg", width=150, caption='Joel hails from a rich academic background and holds PhD degree in Physics, and also a Machine Learning Specialist in DAB Analytics.')
 
-        
+        karabo.image("karabo.jpg", width=150, caption='Karabo, a Machine Learning Engineer at DAB Analytics------')
+
+       
 
 
 # Required to let Streamlit instantiate our web app.
