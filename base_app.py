@@ -30,7 +30,7 @@ import os
 import pandas as pd
 
 # Vectorizer
-news_vectorizer = open("resources/tfidfvect_team1.pkl", "rb")
+news_vectorizer = open("resources/tfidfvect_teamGM1.pkl", "rb")
 # loading your vectorizer from the pkl file
 tweet_cv = joblib.load(news_vectorizer)
 
@@ -103,7 +103,7 @@ def main():
                         # Load your .pkl file with the model of your choice + make predictions
                         # Try loading in multiple models to give the user a choice
                         predictor = joblib.load(
-                            open(os.path.join("resources/logistic_reg_team1.pkl"), "rb"))
+                            open(os.path.join("resources/logistic_reg_teamGM1.pkl"), "rb"))
                         prediction = predictor.predict(vect_text)
 
                         # When model has successfully run, will print prediction
@@ -141,7 +141,7 @@ def main():
                         # Load your .pkl file with the model of your choice + make predictions
                         # Try loading in multiple models to give the user a choice
                         predictor = joblib.load(
-                            open(os.path.join("resources/NB_teamGM1.pkl"), "rb"))
+                            open(os.path.join("resources/NB.pkl"), "rb"))
                         prediction = predictor.predict(vect_text)
 
                         # When model has successfully run, will print prediction
@@ -178,7 +178,7 @@ def main():
                         # Load your .pkl file with the model of your choice + make predictions
                         # Try loading in multiple models to give the user a choice
                         predictor = joblib.load(
-                            open(os.path.join("resources/RF_teamGM1.pkl"), "rb"))
+                            open(os.path.join("resources/RF.pkl"), "rb"))
                         prediction = predictor.predict(vect_text)
 
                         # When model has successfully run, will print prediction
