@@ -250,10 +250,10 @@ def main():
         nnanna.image("Nnanna.jpg", width=150,
                      caption='Nnanna, a Business Analyst at DAB Analytics-----')
 
-        ann.image("Chiamaka.jpeg", width=150,
+        ann.image("Ann.jpg", width=150,
                   caption='Ann, Strategy Manager at DAB Analytics------')
 
-        joel.image("phot-joel.jpeg", width=150,
+        joel.image("Aaron.jpg", width=150,
                    caption='Joel hails from a rich academic background and holds PhD degree in Physics, and also a Machine Learning Specialist in DAB Analytics.')
 
         karabo.image("karabo.jpg", width=150,
