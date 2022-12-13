@@ -30,7 +30,7 @@ import os
 import pandas as pd
 
 # Vectorizer
-news_vectorizer = open("resources/tfidfvect.pkl", "rb")
+news_vectorizer = open("resources/tfidfvect_team1.pkl", "rb")
 # loading your vectorizer from the pkl file
 tweet_cv = joblib.load(news_vectorizer)
 
@@ -61,7 +61,7 @@ def main():
         # Segment the page for various info
         first, second = st.columns(2)
         first.header("Hi! Welcome to DAB Analytics")
-        first.markdown("""<p style="text-align: justify; font-size:13px">We are excited to have you onboard.\nIn DAB Analytics, we provide solutions to world problems using data. Climate change has been a serious concern to the world at large and we want to help solve one of the biggest challenge of Man kind through the products we sell to our valued customers. Would you want to join us and save the planet?\n Awesome! Check the Predicton button to get started. We want to know what your thoughts are on man-made climate change.</p>""", unsafe_allow_html=True)
+        first.markdown("""<p style="text-align: justify; font-size:12px">We are excited to have you onboard.\nIn DAB Analytics, we provide solutions to world problems using data. Climate change has been a serious concern to the world at large and we want to help solve one of the biggest challenge of Man kind through the products we sell to our valued customers. Would you want to join us and save the planet?\n Awesome! Check the Predicton button to get started. We want to know what your thoughts are on man-made climate change.</p>""", unsafe_allow_html=True)
         second.image("archive.jpg", width=400)
         x, y = st.columns(2)
         y.text(
@@ -103,7 +103,7 @@ def main():
                         # Load your .pkl file with the model of your choice + make predictions
                         # Try loading in multiple models to give the user a choice
                         predictor = joblib.load(
-                            open(os.path.join("resources/logistic_reg_teamGM1.pkl"), "rb"))
+                            open(os.path.join("resources/logistic_reg_team1.pkl"), "rb"))
                         prediction = predictor.predict(vect_text)
 
                         # When model has successfully run, will print prediction
@@ -141,7 +141,7 @@ def main():
                         # Load your .pkl file with the model of your choice + make predictions
                         # Try loading in multiple models to give the user a choice
                         predictor = joblib.load(
-                            open(os.path.join("resources/NB.pkl"), "rb"))
+                            open(os.path.join("resources/NB_team1.pkl"), "rb"))
                         prediction = predictor.predict(vect_text)
 
                         # When model has successfully run, will print prediction
@@ -178,7 +178,7 @@ def main():
                         # Load your .pkl file with the model of your choice + make predictions
                         # Try loading in multiple models to give the user a choice
                         predictor = joblib.load(
-                            open(os.path.join("resources/RF.pkl"), "rb"))
+                            open(os.path.join("resources/RF_team1.pkl"), "rb"))
                         prediction = predictor.predict(vect_text)
 
                         # When model has successfully run, will print prediction
