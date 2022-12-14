@@ -126,7 +126,7 @@ def main():
                                 "Anti: You do not believe in man-made climate change")
 
                         prediction_dict = {"Country": [country], "State": [
-                            state], "Predictions": [prediction]}
+                            state], "Model": [ml_algo], "Predictions": [prediction]}
                         prediction_df = pd.DataFrame(prediction_dict)
                         prediction_df.to_csv(
                             "resources/predictions.csv", mode='a', header=False, index=False)
@@ -163,7 +163,7 @@ def main():
                             st.success(
                                 "Anti: You do not believe in man-made climate change")
                         prediction_dict = {"Country": [country], "State": [
-                            state], "Predictions": [prediction]}
+                            state], "Model": [ml_algo], "Predictions": [prediction]}
                         prediction_df = pd.DataFrame(prediction_dict)
                         prediction_df.to_csv(
                             "resources/predictions.csv", mode='a', header=False, index=False)
@@ -200,7 +200,7 @@ def main():
                             st.success(
                                 "Anti: You do not believe in man-made climate change")
                         prediction_dict = {"Country": [country], "State": [
-                            state], "Predictions": [prediction]}
+                            state], "Model": [ml_algo], "Predictions": [prediction]}
                         prediction_df = pd.DataFrame(prediction_dict)
                         prediction_df.to_csv(
                             "resources/predictions.csv", mode='a', header=False, index=False)
@@ -242,22 +242,22 @@ def main():
         olisa.image("olisa.jpg", width=150, caption='Olisa, a team lead at DAB Analytics, comes from a technical background of Computer Engineering with 4+ years of experience in Data in the Financial Industry.')
 
         malik.image("malik.jpg", width=150,
-                    caption='Malik, a Machine Learning Engineer at DAB Analytics----- ')
+                    caption='Malik, a Machine Learning Engineer at DAB Analytics')
 
         eze.image("Eze.jpg", width=150,
-                  caption='Eze, a Data Scientist at DAB Analytics with a tschniacal background in------')
+                  caption='Eze, Data Scientist at DAB Analytics')
 
         nnanna.image("Nnanna.jpg", width=150,
-                     caption='Nnanna, a Business Analyst at DAB Analytics-----')
+                     caption='Nnanna, Business Analyst at DAB Analytics')
 
         ann.image("Ann.jpg", width=150,
-                  caption='Ann, Strategy Manager at DAB Analytics------')
+                  caption='Ann, Strategy Manager at DAB Analytics')
 
         joel.image("Aaron.jpg", width=150,
                    caption='Joel hails from a rich academic background and holds PhD degree in Physics, and also a Machine Learning Specialist in DAB Analytics.')
 
         karabo.image("karabo.jpg", width=150,
-                     caption='Karabo, a Machine Learning Engineer at DAB Analytics------')
+                     caption='Karabo, Machine Learning Engineer at DAB Analytics')
 
 
 # Required to let Streamlit instantiate our web app.

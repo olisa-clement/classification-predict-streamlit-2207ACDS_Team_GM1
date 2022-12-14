@@ -1,5 +1,5 @@
-,Country,State,Predictions
-0,South Africa,Cape Town,[1]
-Nigeria,Abuja,[1]
-South Africa,Capetown,[1]
-Bostwana,Maputo,[1]
+Country,State,Model,Predictions
+Morroco,State,Logistic Regression,[0]
+Nigeria,Abuja,Naive Bayes,[1]
+Nigeria,Abuja,Random Forest,[1]
+Nigeria,Abuja,Logistic Regression,[0]
