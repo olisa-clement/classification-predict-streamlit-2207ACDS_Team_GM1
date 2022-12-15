@@ -49,7 +49,7 @@ def main():
     # st.subheader("Climate change tweet classification")
     exc = False
     # Creating a side bar with company options
-    nav = st.sidebar.radio("Navigation", ["Home", "About Us"])
+    nav = st.sidebar.radio("Navigation", ["Home", "About Us", "Contact Us"])
     # Creating sidebar with selection box -
     # you can create multiple pages this way
     # options = ["Prediction", "Information"]
@@ -70,7 +70,8 @@ def main():
 
         if check.checkbox("Prediction"):
 
-            st.markdown("Please enter your country and state, then press Enter")
+            st.markdown(
+                "Please enter your country and state, then press Enter")
 
             # Building out the predication page
             country, state = st.columns(2)
@@ -86,7 +87,7 @@ def main():
                           'Naive Bayes', 'Random Forest']
                 info, model_option = st.columns(2)
                 info.info("Information About The Selected ML Model")
-                
+
                 ml_algo = model_option.selectbox(
                     "Please select a model", models)
                 # Creating a text box for user input
@@ -258,6 +259,44 @@ def main():
 
         karabo.image("karabo.jpg", width=150,
                      caption='Karabo, Machine Learning Engineer at DAB Analytics')
+
+    if nav == "Contact Us":
+        st.markdown("""<style>
+                        p {background-image: url(‘world-map-bg-image.jpg’);}
+                    </style>""", unsafe_allow_html=True)
+
+        st.markdown("""<div style="text-align: center;
+                        font-weight: bold;
+                        font-size: 40px;
+                        font-family: serif;
+                        letter-spacing: 3px;
+                    ">GET IN TOUCH</div>""", unsafe_allow_html=True)
+
+        st.markdown(
+            """<p style="text-align: center; font-size:15px; font-family: serif;">Phone: +2348062792419</p>""", unsafe_allow_html=True)
+
+        st.markdown(
+            """<div style="text-align: center; font-size:15px; font-family: serif;">Email: www.dabanalytics.com</div>""", unsafe_allow_html=True)
+
+        a, name, b= st.columns([1,2,1])
+        a, email, b = st.columns([1,2,1])
+        a, phone, b = st.columns([1,2,1])
+        a, text, b = st.columns([1,2,1])
+        a, c, button, b = st.columns([1,2,1,1])
+
+        customer_name = name.text_input("Yor Name", placeholder="Your Name", label_visibility="hidden")
+        customer_email = email.text_input("Email", placeholder="Your Email", label_visibility="collapsed")
+        customer_phone = phone.text_input("Email", placeholder="Your Phone", label_visibility="collapsed")
+        
+        message = text.text_area("Your Message", placeholder="Your Message", label_visibility="hidden")
+        submit = button.button("Submit")
+
+        if submit:
+            feedback_dict = {"Name": [customer_name], "Email": [customer_email], "Phone": [customer_phone], "Message": [message]}
+            feedback_df = pd.DataFrame(feedback_dict)
+            feedback_df.to_csv("resources/feedback.csv", mode='a', header=False, index=False)
+
+            st.success("Submitted succesfully")
 
 
 # Required to let Streamlit instantiate our web app.
