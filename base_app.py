@@ -260,10 +260,7 @@ def main():
         karabo.image("karabo.jpg", width=150,
                      caption='Karabo, Machine Learning Engineer at DAB Analytics')
 
-    if nav == "Contact Us":
-        st.markdown("""<style>
-                        p {background-image: url(‘world-map-bg-image.jpg’);}
-                    </style>""", unsafe_allow_html=True)
+    if nav == "Contact Us":   
 
         st.markdown("""<div style="text-align: center;
                         font-weight: bold;
